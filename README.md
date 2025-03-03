@@ -70,3 +70,62 @@ The following testing steps are included:
 
 Testing is implemented using Python’s `unittest` framework.
 
+---
+
+## Assumptions
+
+1. **Old LMS Data**:
+   - The data from the old LMS is static and will not change.
+   
+2. **New LMS Data**:
+   - The New LMS will continuously receive new data and updates. These updates need to be handled incrementally.
+
+3. **Date Fields**:
+   - All date fields in the data will be either in a valid date format or can be easily converted to `datetime` objects.
+
+4. **Missing Data**:
+   - Missing values in address-related fields (such as city, state, or zip code) will be handled by filling them with the value `'Unknown'`.
+
+---
+
+## Recommendations
+
+1. **Incremental Updates**:
+   - Ensure that the New LMS is set up to **automatically push incremental updates** to the data warehouse. This would ensure that the system can accommodate new and updated records from the New LMS continuously.
+
+2. **Pipeline Auditing**:
+   - Periodically audit the data pipeline to ensure it is **handling edge cases**, such as invalid or corrupted records. This can be done by checking for records that do not meet the expected data format or have missing fields.
+   
+3. **Logging and Error Handling**:
+   - Consider adding **logging** at key points in the ETL pipeline to track progress and any errors. Logging can be particularly useful for monitoring the incremental updates, to ensure that new and updated records are being correctly processed.
+
+---
+
+## How to Run the Project
+
+To run the ETL pipeline:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/unified-loan-management-system.git
+
+---
+   
+![Project Strucure](https://github.com/monikavaddineni/Unified-Loan-Management-System-/blob/master/Project%20Structure.txt)
+
+---
+
+## Conclusion
+
+This project provides an automated **ETL (Extract, Transform, Load)** pipeline that extracts, transforms, and loads loan data from two different Loan Management Systems (LMS) into a unified format. The pipeline ensures that data from both the **Old LMS** and **New LMS** is processed, cleaned, and combined efficiently for analysis.
+
+Key features include:
+
+- **Data Extraction**: The pipeline extracts data from both the static **Old LMS** (CSV files) and the dynamic **New LMS** (MySQL database).
+- **Data Transformation**: It ensures consistency in data types, handles missing values, and standardizes column names across datasets.
+- **Data Merging**: The cleaned datasets from both systems are merged into a unified format.
+- **Incremental Updates**: The pipeline supports incremental updates from the New LMS, ensuring that new and updated records are handled efficiently.
+  
+By following the **recommendations for logging**, **incremental updates**, and **auditing**, the system can be maintained and scaled to accommodate future growth, ensuring data integrity and system reliability.
+
+
