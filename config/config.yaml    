@@ -1,0 +1,15 @@
+database:
+  host: <DB_HOST>
+  user: <DB_USER>
+  password: <DB_PASSWORD>
+  database: <DB_NAME>
+  port: 3306
+
+data:
+  old_lms_data: 'path_to_old_lms_data.zip'
+  new_lms_data: 'path_to_new_lms_data.zip'
+  processed_data: 'path_to_processed_data/'
+
+logging:
+  level: 'INFO'
+  log_file: 'logs/project.log'
