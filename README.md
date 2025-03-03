@@ -88,6 +88,22 @@ Testing is implemented using Python’s `unittest` framework.
 
 ---
 
+## How to Run the Project
+
+To run the ETL pipeline:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/unified-loan-management-system.git
+
+---
+
+## Project Structure
+
+![Project Strucure](https://github.com/monikavaddineni/Unified-Loan-Management-System-/blob/master/Project%20Structure.txt)
+project_name/ │ ├── data/ # Folder containing all the input and output data files │ ├── homework_old_lms_data.zip # Old LMS data zip file │ ├── homework_new_lms_data.zip # New LMS data zip file │ ├── src/ # Folder containing all the source code for ETL │ ├── ingestion.py # Script for data ingestion │ ├── transformation.py # Script for data transformation │ ├── merging.py # Script for merging the datasets │ ├── incremental_update.py # Script for handling incremental data updates │ ├── config/ # Configuration files │ ├── config.yaml # Configuration file for database connection and pipeline settings │ ├── tests/ # Folder containing all the test cases │ ├── test_ingestion.py # Unit tests for data ingestion │ ├── test_transformation.py # Unit tests for data transformation │ ├── test_merging.py # Unit tests for data merging │ ├── test_incremental.py # Unit tests for incremental updates │ ├── README.md # Project documentation ├── requirements.txt # Python dependencies file ├── pipeline_orchestration.py # Orchestrator for the entire pipeline
+---
+
 ## Recommendations
 
 1. **Incremental Updates**:
@@ -98,20 +114,6 @@ Testing is implemented using Python’s `unittest` framework.
    
 3. **Logging and Error Handling**:
    - Consider adding **logging** at key points in the ETL pipeline to track progress and any errors. Logging can be particularly useful for monitoring the incremental updates, to ensure that new and updated records are being correctly processed.
-
----
-
-## How to Run the Project
-
-To run the ETL pipeline:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/unified-loan-management-system.git
-
----
-   
-![Project Strucure](https://github.com/monikavaddineni/Unified-Loan-Management-System-/blob/master/Project%20Structure.txt)
 
 ---
 
