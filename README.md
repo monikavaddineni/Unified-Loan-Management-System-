@@ -95,53 +95,7 @@ To run the ETL pipeline:
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/unified-loan-management-system.git
-
----
-
-## Project Structure
-
-Project Structure :
-│
-├── README.md                      
-├── config/                         
-│   ├── config.yaml                 
-│   ├── logging_config.yaml         
-├── data/                           
-│   ├── raw/                        
-│   │   ├── homework_old_lms_loans.csv
-│   │   ├── homework_old_lms_customers.csv
-│   │   ├── homework_old_lms_transactions.csv
-│   │   ├── homework_new_lms_loans.csv
-│   │   ├── homework_new_lms_borrowers.csv
-│   │   ├── homework_new_lms_loan_borrower.csv
-│   │   ├── homework_new_lms_transactions.csv
-│   ├── processed/                  
-│   │   ├── final_customers.csv
-│   │   ├── final_loans.csv
-│   │   ├── final_transactions.csv
-│   ├── logs/                       
-│   │   ├── pipeline.log
-├── src/                            
-│   ├── __init__.py
-│   ├── ingestion.py                
-│   ├── transformation.py           
-│   ├── loading.py                  
-│   ├── incremental.py              
-│   ├── utils.py                    
-│   ├── pipeline.py    
-│
-├── sql/
-│   └── schema.sql                 
-├── tests/                          
-│   ├── __init__.py
-│   ├── test_ingestion.py           
-│   ├── test_transformation.py      
-│   ├── test_loading.py             
-│   ├── test_incremental.py         
-│   ├── test_pipeline.py            
-├── requirements.txt                                 
-
-
+   
 
 ---
 
